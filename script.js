@@ -20,6 +20,21 @@ addBtn.addEventListener("click", function() {
   noteInput.placeholder = "Add a note";
   
   let trueBtn = document.createElement("button");
+  
+  
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  li.appendChild(taskSpan);
+  li.appendChild(noteInput);
+  li.appendChild(deleteBtn);
+  li.appendChild(trueBtn);
+  taskList.appendChild(li);
+  
+  message.textContent = "Task Added Successfully";
+  
+  count++;
+  taskCount.textContent= count;
+  taskInput.value = "";
   deleteBtn.addEventListener("click", function () {
     if (trueBtn.texContent === "") {
       trueBtn.texContent = "✅";
@@ -28,20 +43,6 @@ addBtn.addEventListener("click", function() {
       trueBtn.texContent = "";
     }
   });
-  
-  let deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete";
-  li.appendChild(taskSpan);
-  li.appendChild(noteInput);
-  li.appendChild(deleteBtn);
-  taskList.appendChild(li);
-  
-  message.textContent = "Task Added Successfully";
-  
-  count++;
-  taskCount.textContent= count;
-  taskInput.value = "";
-  
   
   deleteBtn.addEventListener("click", function () {
     li.remove();
