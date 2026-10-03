@@ -19,6 +19,15 @@ addBtn.addEventListener("click", function() {
   noteInput.type = "text";
   noteInput.placeholder = "Add a note";
   
+  let trueBtn = document.createElement("button");
+  deleteBtn.addEventListener("click", function () {
+    if (trueBtn.texContent === "") {
+      trueBtn.texContent = "✅";
+    }
+    else {
+      trueBtn.texContent = "";
+    }
+  
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
   li.appendChild(taskSpan);
