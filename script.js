@@ -27,6 +27,7 @@ addBtn.addEventListener("click", function() {
     else {
       trueBtn.texContent = "";
     }
+  });
   
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
