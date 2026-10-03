@@ -24,10 +24,11 @@ addBtn.addEventListener("click", function() {
   
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
+  li.appendChild(trueBtn);
   li.appendChild(taskSpan);
   li.appendChild(noteInput);
   li.appendChild(deleteBtn);
-  li.appendChild(trueBtn);
+  
   taskList.appendChild(li);
   
   message.textContent = "Task Added Successfully";
@@ -37,7 +38,7 @@ addBtn.addEventListener("click", function() {
   taskInput.value = "";
   
   trueBtn.addEventListener("click", function () {
-    if (trueBtn.texContent === "No") {
+    if (trueBtn.texContent == "No") {
       trueBtn.texContent = "true";
       return;
     };
