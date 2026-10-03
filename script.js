@@ -19,12 +19,8 @@ addBtn.addEventListener("click", function() {
   noteInput.type = "text";
   noteInput.placeholder = "Add a note";
   
-  let trueBtn = document.createElement("button");
-  trueBtn.texContent = "No";
-  
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
-  li.appendChild(trueBtn);
   li.appendChild(taskSpan);
   li.appendChild(noteInput);
   li.appendChild(deleteBtn);
@@ -36,14 +32,6 @@ addBtn.addEventListener("click", function() {
   count++;
   taskCount.textContent= count;
   taskInput.value = "";
-  
-  trueBtn.addEventListener("click", function () {
-    if (trueBtn.texContent == "No") {
-      trueBtn.texContent = "true";
-      return;
-    };
-      trueBtn.texContent = "No";
-  });
   
   deleteBtn.addEventListener("click", function () {
     li.remove();
