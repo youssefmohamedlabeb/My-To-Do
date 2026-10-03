@@ -20,7 +20,7 @@ addBtn.addEventListener("click", function() {
   noteInput.placeholder = "Add a note";
   
   let trueBtn = document.createElement("button");
-  trueBtn.texContent = "لم يتم";
+  trueBtn.texContent = "No";
   
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
@@ -37,12 +37,11 @@ addBtn.addEventListener("click", function() {
   taskInput.value = "";
   
   trueBtn.addEventListener("click", function () {
-    if (trueBtn.texContent === "") {
-      trueBtn.texContent = "تم";
+    if (trueBtn.texContent === "No") {
+      trueBtn.texContent = "true";
+      return;
     };
-    else {
-      trueBtn.texContent = "لم يتم";
-    };
+      trueBtn.texContent = "No";
   });
   
   deleteBtn.addEventListener("click", function () {
