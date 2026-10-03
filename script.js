@@ -20,7 +20,7 @@ addBtn.addEventListener("click", function() {
   noteInput.placeholder = "Add a note";
   
   let trueBtn = document.createElement("button");
-  
+  trueBtn.texContent = "!";
   
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
@@ -35,12 +35,12 @@ addBtn.addEventListener("click", function() {
   count++;
   taskCount.textContent= count;
   taskInput.value = "";
-  deleteBtn.addEventListener("click", function () {
+  trueBtn.addEventListener("click", function () {
     if (trueBtn.texContent === "") {
       trueBtn.texContent = "✅";
     }
     else {
-      trueBtn.texContent = "";
+      trueBtn.texContent = "!";
     }
   });
   
